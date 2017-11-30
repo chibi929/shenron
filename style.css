@@ -21,18 +21,43 @@ img {
   max-width: 30vh;
 }
 
-img:nth-child(1) {
-  transform: translate(0, -300px);
-}
+/**
+ * 横向きの場合のスタイル
+ */
+@media screen and (orientation: landscape) {
+  img:nth-child(1) {
+    transform: translate(0, -30vh);
+  }
 
-img:nth-child(2) {
-  transform: translate(300px, 0) rotate(90deg);
-}
+  img:nth-child(2) {
+    transform: translate(30vh, 0) rotate(90deg);
+  }
 
-img:nth-child(3) {
-  transform: translate(0, 300px) rotate(180deg);
-}
+  img:nth-child(3) {
+    transform: translate(0, 30vh) rotate(180deg);
+  }
 
-img:nth-child(4) {
-  transform: translate(-300px, 0) rotate(270deg);
+  img:nth-child(4) {
+    transform: translate(-30vh, 0) rotate(270deg);
+  }
+}
+/**
+ * 縦向きの場合のスタイル
+ */
+@media screen and (orientation: portrait) {
+  img:nth-child(1) {
+    transform: translate(0, -30vw);
+  }
+
+  img:nth-child(2) {
+    transform: translate(30vw, 0) rotate(90deg);
+  }
+
+  img:nth-child(3) {
+    transform: translate(0, 30vw) rotate(180deg);
+  }
+
+  img:nth-child(4) {
+    transform: translate(-30vw, 0) rotate(270deg);
+  }
 }
