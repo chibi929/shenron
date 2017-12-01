@@ -19,6 +19,12 @@ img {
   position: absolute;
   width: 30vw;
   max-width: 30vh;
+  transition: all 1s;
+  opacity: 0;
+}
+
+img.fade {
+  opacity: 1;
 }
 
 /**
