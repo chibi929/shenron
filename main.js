@@ -40,9 +40,14 @@ function execMessage(data) {
 
   const action = data.action;
   if (action === 'show') {
-    const imageUrl = data.imageUrl;
-    $('.imageBox img').addClass('fade');
-    $('.imageBox img').attr("src", imageUrl);
+    var audio = new Audio();
+    audio.src = "./res/thunder.mp3";
+    audio.play();
+    setTimeout(function() {
+      const imageUrl = data.imageUrl;
+      $('.imageBox img').addClass('fade');
+      $('.imageBox img').attr("src", imageUrl);
+    }, 1000);
   } else {
     $('.imageBox img').removeClass('fade');
   }
